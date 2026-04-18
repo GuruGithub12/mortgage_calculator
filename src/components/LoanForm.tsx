@@ -49,11 +49,11 @@ export default function LoanForm({ onCalculate, onReset, hasResults }: LoanFormP
               id="principal"
               value={principal}
               onChange={(e) => setPrincipal(e.target.value)}
-              className="w-full pl-10 pr-4 py-4 bg-white/5 border border-white/10 rounded-2xl focus:ring-2 focus:ring-purple-500 focus:border-transparent text-white placeholder-gray-500 backdrop-blur-sm transition-all duration-300 hover:bg-white/10 group-hover:border-purple-500/50 text-lg font-medium"
+              className="w-full pl-10 pr-4 py-4 bg-white/5 border border-white/10 rounded-2xl focus:ring-2 focus:ring-emerald-500 focus:border-transparent text-white placeholder-gray-500 backdrop-blur-sm transition-all duration-300 hover:bg-white/10 group-hover:border-emerald-500/50 text-lg font-medium"
               placeholder="500000"
               required
-              min="1000"
-              step="1000"
+              min="1"
+              step="0.01"
             />
           </div>
           <p className="mt-2 text-xs text-gray-400">Outstanding loan balance</p>
@@ -73,12 +73,12 @@ export default function LoanForm({ onCalculate, onReset, hasResults }: LoanFormP
               id="interestRate"
               value={annualInterestRate}
               onChange={(e) => setAnnualInterestRate(e.target.value)}
-              className="w-full px-4 py-4 bg-white/5 border border-white/10 rounded-2xl focus:ring-2 focus:ring-purple-500 focus:border-transparent text-white placeholder-gray-500 backdrop-blur-sm transition-all duration-300 hover:bg-white/10 group-hover:border-blue-500/50 text-lg font-medium"
+              className="w-full px-4 py-4 bg-white/5 border border-white/10 rounded-2xl focus:ring-2 focus:ring-emerald-500 focus:border-transparent text-white placeholder-gray-500 backdrop-blur-sm transition-all duration-300 hover:bg-white/10 group-hover:border-blue-500/50 text-lg font-medium"
               placeholder="7.5"
               required
-              min="0.1"
+              min="0.01"
               max="30"
-              step="0.1"
+              step="0.01"
             />
             <span className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 font-semibold text-lg">%</span>
           </div>
@@ -99,12 +99,12 @@ export default function LoanForm({ onCalculate, onReset, hasResults }: LoanFormP
               id="tenure"
               value={tenureYears}
               onChange={(e) => setTenureYears(e.target.value)}
-              className="w-full px-4 py-4 bg-white/5 border border-white/10 rounded-2xl focus:ring-2 focus:ring-purple-500 focus:border-transparent text-white placeholder-gray-500 backdrop-blur-sm transition-all duration-300 hover:bg-white/10 group-hover:border-green-500/50 text-lg font-medium"
+              className="w-full px-4 py-4 bg-white/5 border border-white/10 rounded-2xl focus:ring-2 focus:ring-emerald-500 focus:border-transparent text-white placeholder-gray-500 backdrop-blur-sm transition-all duration-300 hover:bg-white/10 group-hover:border-green-500/50 text-lg font-medium"
               placeholder="20"
               required
               min="1"
               max="40"
-              step="0.5"
+              step="0.25"
             />
             <span className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 font-semibold text-lg">yrs</span>
           </div>
@@ -116,7 +116,7 @@ export default function LoanForm({ onCalculate, onReset, hasResults }: LoanFormP
       <div className="flex gap-4 flex-wrap">
         <button
           type="submit"
-          className="flex-1 min-w-[200px] px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-2xl font-semibold shadow-lg shadow-purple-500/50 hover:shadow-xl hover:shadow-purple-500/60 hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2"
+          className="flex-1 min-w-[200px] px-8 py-4 bg-gradient-to-r from-emerald-500 to-sky-500 text-white rounded-2xl font-semibold shadow-lg shadow-emerald-500/40 hover:shadow-xl hover:shadow-emerald-500/50 hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2"
         >
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />

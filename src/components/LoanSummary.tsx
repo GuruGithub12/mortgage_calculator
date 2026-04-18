@@ -15,17 +15,17 @@ export default function LoanSummary({ loanData, emi, schedule }: LoanSummaryProp
   return (
     <div className="mb-10">
       {/* Monthly EMI - Hero Card */}
-      <div className="bg-gradient-to-br from-purple-500 via-purple-600 to-blue-600 rounded-3xl p-10 mb-8 shadow-2xl shadow-purple-500/30 border border-purple-400/30 relative overflow-hidden group">
+      <div className="bg-gradient-to-br from-emerald-600 via-emerald-700 to-teal-700 rounded-3xl p-10 mb-8 shadow-2xl shadow-emerald-500/20 border border-emerald-400/20 relative overflow-hidden group">
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
         <div className="relative">
-          <div className="text-sm font-semibold mb-3 text-purple-100 uppercase tracking-wider flex items-center gap-2">
+          <div className="text-sm font-semibold mb-3 text-emerald-100 uppercase tracking-wider flex items-center gap-2">
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
             Monthly EMI Payment
           </div>
           <div className="text-6xl md:text-7xl font-bold text-white mb-2">{formatCurrency(emi)}</div>
-          <p className="text-purple-100 text-sm">Fixed monthly payment for {loanData.tenureYears} years</p>
+          <p className="text-emerald-100 text-sm">Fixed monthly payment for {loanData.tenureYears} years</p>
         </div>
       </div>
 
@@ -84,7 +84,7 @@ export default function LoanSummary({ loanData, emi, schedule }: LoanSummaryProp
               <div className="text-3xl font-bold text-white group-hover:scale-105 transition-transform">{loanData.annualInterestRate.toFixed(2)}%</div>
             </div>
             <div className="ml-3 opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all">
-              <svg className="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-8 h-8 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
               </svg>
             </div>
